@@ -1,0 +1,40 @@
+<div class="login-container">
+    <mat-card class="login-card">
+        <mat-card-content>
+            <div class="login-title-container">
+                <label class="login-title-content"> Iniciar Sesión </label>
+            </div>
+    
+            <form (ngSubmit)="onLogin()" name="loginForm" [formGroup]="loginForm">
+                <div class="login-username-input">
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label> Usuario </mat-label>
+                        <input formControlName="username" matInput required />
+                        <mat-error *ngIf="loginForm.get('username')?.hasError('required')">
+                            El nombre de usuario es requerido
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+    
+                <div class="login-password-input">
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label> Password </mat-label>
+                        <input formControlName="password" matInput [type]="hide ? 'password' : 'text'" required />
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide Password'" [attr.aria-pressed]="hide">
+                            <mat-icon>{{ hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                        <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
+                            Contraseña requerida
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+
+                <!-- TODO: Update button behavior -->
+                <div class="login-button-container">
+                    <!-- <button class="login-button-content" type="submit" [disabled]="!loginForm.valid"> Ingresar </button> -->
+                    <button class="login-button-content"> Ingresar </button>
+                </div>
+            </form>
+        </mat-card-content>
+    </mat-card>    
+</div>

@@ -1,0 +1,54 @@
+/* Center the entire card on the screen */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 180px;
+}
+
+/* Style the card with padding and shadow */
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+/* Center with space below and style the title */
+.login-title-container {
+    text-align: center;
+    margin-bottom: 24px;
+    padding-bottom: 8px;
+}
+
+.login-title-content {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Ensure form fields are full width and space below */
+.full-width {
+    width: 100%;
+    padding-bottom: 7.5px;
+}
+
+/* Align the button to the right */
+.login-button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Style the button */
+.login-button-content {
+    background-color: #f5deb3;;
+    border: none;
+    border-radius: 4px;
+    color: #414141;
+    cursor: pointer;
+    padding: 12px;
+    font-size: 16px;
+    width: 40%;
+}
