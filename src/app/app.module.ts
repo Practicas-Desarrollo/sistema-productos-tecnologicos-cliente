@@ -15,12 +15,14 @@ import { MatSortModule } from '@angular/material/sort';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './features/auth/login/login.component';
+import { HeaderComponent } from './shared/components/header/header.component';
 import { ProductListComponent } from './features/product/product-list/product-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    HeaderComponent,
     ProductListComponent
   ],
   imports: [

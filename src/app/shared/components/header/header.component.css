@@ -1,0 +1,28 @@
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #3EA0AD;
+    color: white;
+    height: 50px;
+}
+
+.title h1 {
+    margin: 0;
+    font-size: 24px;
+    padding-left: 28px;
+}
+
+.connection-status {
+    padding-right: 24px;
+}
+
+.connection-status button {
+    background-color: white;
+    color: #5c5f71;
+}
+
+.connection-status button:hover {
+    background-color: #f0f0f0;
+}
