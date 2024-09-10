@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { ProductService } from '../../../core/services/product/product.service';
 import { Product } from '../../../core/models/product.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-list',
@@ -12,11 +13,13 @@ export class ProductListComponent implements OnInit {
 
   displayedColumns: string[] = ['displayId', 'nombre', 'precio', 'cantidad', 'categoria', 'actions'];
   dataSource = new MatTableDataSource<Product>([]);
+  isFormVisible = false;
 
-  constructor(private productService: ProductService) {}
+  constructor(private productService: ProductService, private router: Router) {}
 
   ngOnInit(): void {
     this.fetchProducts();
+    this.isFormVisible = this.router.url.includes('add-product');
   }
 
   fetchProducts() {
@@ -39,6 +42,11 @@ export class ProductListComponent implements OnInit {
 
   deleteProduct(id: string) { 
     console.log('Deleting product with ID', id);
+  }
+
+  showForm(): void {
+    this.isFormVisible = true;
+    this.router.navigate(['/add-product']);
   }
 
 }

@@ -1,3 +1,29 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 15px 0 10px 40px;
+}
+
+.add-button {
+    padding-right: 24px;
+}
+
+.add-button button {
+    background-color: rgb(118, 178, 227);
+    color: #000000;
+}
+
+.add-button button:hover {
+    background-color: #fffa77;
+}
+
 .mat-elevation-z8 {
     margin: 20px;
     background: white;
