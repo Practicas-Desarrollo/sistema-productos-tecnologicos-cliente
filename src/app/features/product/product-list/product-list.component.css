@@ -1,0 +1,9 @@
+.mat-elevation-z8 {
+    margin: 20px;
+    background: white;
+    border-radius: 5px;
+}
+
+.mat-table {
+    width: 100%;
+}
