@@ -9,6 +9,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from "@angular/material/input";
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
@@ -20,6 +22,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/layout/header/header.component';
 import { SidenavComponent } from './shared/layout/sidenav/sidenav.component';
 import { LoginComponent } from './features/auth/login/login.component';
+import { ProductFormComponent } from './features/product/product-form/product-form.component';
 import { ProductListComponent } from './features/product/product-list/product-list.component';
 
 @NgModule({
@@ -28,6 +31,7 @@ import { ProductListComponent } from './features/product/product-list/product-li
     HeaderComponent,
     SidenavComponent,
     LoginComponent,
+    ProductFormComponent,
     ProductListComponent
   ],
   imports: [
@@ -37,10 +41,12 @@ import { ProductListComponent } from './features/product/product-list/product-li
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    MatButtonModule,
     MatCardModule,
     MatIconModule,
     MatInputModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatButtonModule,
     MatSidenavModule,
     MatListModule,
     MatDividerModule,
