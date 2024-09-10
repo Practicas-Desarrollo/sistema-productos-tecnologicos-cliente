@@ -1,0 +1,39 @@
+.sidenav-container {
+    height: 90vh;
+}
+
+mat-sidenav {
+    width: 280px;
+}
+
+@media (max-width: 768px) {
+    mat-sidenav {
+        width: 220px;
+    }
+}
+
+.user-info {
+    padding: 20px 10px 10px 40px;
+    text-align: left;
+}
+
+.user-info {
+    margin-bottom: 10px;
+}
+
+.user-field, .role-field {
+    margin: 10px 0;
+}
+
+.user-field label, .role-field label {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.mat-nav-list {
+    padding: 28px 16px 0 27px;
+}
+
+mat-list-item {
+    cursor: pointer;
+}

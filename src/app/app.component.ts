@@ -9,14 +9,14 @@ import { NavigationEnd, Router } from '@angular/router';
 export class AppComponent {
 
   title = 'sistema-productos-tecnologicos-cliente';
-  showHeader: boolean = true;
+  showLayout: boolean = true;
 
-  constructor(private router: Router) {}
+  constructor(public router: Router) {}
 
   ngOnInit(): void {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        this.showHeader = event.url !== '/login';
+        this.showLayout = event.url !== '/login';
       }
     });
   }
