@@ -1,0 +1,51 @@
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+        <mat-label>Nombre</mat-label>
+        <input matInput formControlName="nombre" required>
+        <mat-error *ngIf="productForm.get('nombre')?.hasError('required')">
+            Nombre is <strong>required</strong>
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Descripción</mat-label>
+        <textarea matInput formControlName="descripcion" required></textarea>
+        <mat-error *ngIf="productForm.get('descripcion')?.hasError('required')">
+            Descripción is <strong>required</strong>
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Precio</mat-label>
+        <input matInput formControlName="precio" type="number" step="0.01" required>
+        <mat-error *ngIf="productForm.get('precio')?.hasError('required')">
+            Precio is <strong>required</strong>
+        </mat-error>
+        <mat-error *ngIf="productForm.get('precio')?.hasError('min')">
+            Precio must be greater than 0
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Cantidad</mat-label>
+        <input matInput formControlName="cantidad" type="number" required>
+        <mat-error *ngIf="productForm.get('cantidad')?.hasError('required')">
+            Cantidad is <strong>required</strong>
+        </mat-error>
+        <mat-error *ngIf="productForm.get('cantidad')?.hasError('min')">
+            Cantidad must be greater than 0
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Categoría</mat-label>
+        <mat-select formControlName="categoria" required>
+            <mat-option *ngFor="let category of categories" [value]="category">{{ category }}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="productForm.get('categoria')?.hasError('required')">
+            Categoría is <strong>required</strong>
+        </mat-error>
+        </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+</form>

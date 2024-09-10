@@ -1,0 +1,26 @@
+/* Ensure the form has some margin and padding */
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for form fields */
+mat-form-field {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+/* Style for the submit button */
+button {
+    display: block;
+    margin: 20px auto 0;
+}
+
+  /* Add some space around form errors */
+mat-error {
+    color: #d32f2f; /* Red color for error messages */
+}
