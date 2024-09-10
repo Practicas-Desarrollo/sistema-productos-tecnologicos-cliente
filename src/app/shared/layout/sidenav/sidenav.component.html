@@ -1,0 +1,33 @@
+<mat-sidenav-container class="sidenav-container">
+    <!-- Sidenav -->
+    <mat-sidenav mode="side" opened>
+        <div class="user-info">
+            <div class="user-field">
+            <label> Usuario: </label>
+                <p>{{ userName }}</p>
+            </div>
+
+            <div class="role-field">
+                <label> Rol: </label>
+                <p>{{ userRole }}</p>
+            </div>
+        </div>
+
+        <mat-divider></mat-divider>
+
+        <!-- Navigation Links -->
+        <mat-nav-list>
+            <mat-list-item routerLink="/users"> Gestión Usuarios </mat-list-item>
+            <mat-list-item routerLink="/products"> Gestión Productos </mat-list-item>
+            <mat-list-item routerLink="/sales"> Gestión Ventas </mat-list-item>
+            <mat-list-item routerLink="/purchases"> Gestión Compras </mat-list-item>
+            <mat-list-item routerLink="/menu"> Gestión Menú </mat-list-item>
+            <mat-list-item routerLink="/reports"> Reportes </mat-list-item>
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <!-- Main content -->
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
