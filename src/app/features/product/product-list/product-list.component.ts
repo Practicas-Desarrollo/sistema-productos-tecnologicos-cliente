@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
-import { ProductService } from '../../../shared/services/product/product.service';
+import { ProductService } from '../../../core/services/product/product.service';
 import { Product } from '../../../core/models/product.model';
 
 @Component({
