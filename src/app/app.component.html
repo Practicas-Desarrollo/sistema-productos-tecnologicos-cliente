@@ -1,4 +1,6 @@
-<app-header *ngIf="showHeader"></app-header>
-<div>
+<app-header *ngIf="showLayout"></app-header>
+<app-sidenav *ngIf="showLayout"></app-sidenav>
+<div class="main-content">
     <router-outlet></router-outlet>
+    <app-login *ngIf="router.url === '/login'"></app-login>
 </div>
