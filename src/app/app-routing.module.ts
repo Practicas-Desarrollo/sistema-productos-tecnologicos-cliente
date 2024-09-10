@@ -5,7 +5,14 @@ import { ProductListComponent } from './features/product/product-list/product-li
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'products', component: ProductListComponent }
+  { path: 'users', component: ProductListComponent },
+  { path: 'products', component: ProductListComponent },
+  { path: 'sales', component: ProductListComponent },
+  { path: 'purchases', component: ProductListComponent },
+  { path: 'menu', component: ProductListComponent },
+  { path: 'reports', component: ProductListComponent },
+  { path: '', redirectTo: '/products', pathMatch: 'full' },
+  { path: '**', redirectTo: '/products' }
 ];
 
 @NgModule({
