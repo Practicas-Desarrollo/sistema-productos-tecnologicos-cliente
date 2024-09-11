@@ -1,0 +1,23 @@
+.category-management-container {
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin: 0;
+}
+
+table {
+  width: 100%;
+}
+
+button {
+  min-width: 120px;
+}
