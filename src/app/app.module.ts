@@ -24,6 +24,7 @@ import { SidenavComponent } from './shared/layout/sidenav/sidenav.component';
 import { LoginComponent } from './features/auth/login/login.component';
 import { ProductFormComponent } from './features/product/product-form/product-form.component';
 import { ProductListComponent } from './features/product/product-list/product-list.component';
+import { CategoryListComponent } from './features/category/category-list/category-list.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ProductListComponent } from './features/product/product-list/product-li
     SidenavComponent,
     LoginComponent,
     ProductFormComponent,
-    ProductListComponent
+    ProductListComponent,
+    CategoryListComponent
   ],
   imports: [
     BrowserModule,
