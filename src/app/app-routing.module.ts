@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './features/auth/login/login.component';
+import { ProductFormComponent } from './features/product/product-form/product-form.component';
 import { ProductListComponent } from './features/product/product-list/product-list.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'users', component: ProductListComponent },
   { path: 'products', component: ProductListComponent },
+  { path: 'add-product', component: ProductFormComponent },
   { path: 'sales', component: ProductListComponent },
   { path: 'purchases', component: ProductListComponent },
   { path: 'menu', component: ProductListComponent },

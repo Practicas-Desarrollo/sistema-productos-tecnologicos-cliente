@@ -1,37 +1,45 @@
-<div class="mat-elevation-z8">
+<div class="header">
+    <span class="title"> Gestionar Productos </span>
+
+    <div class="add-button">
+        <button mat-button (click)="showForm()">
+            Añadir Producto
+        </button>
+    </div>
+</div>
+
+<div *ngIf="isFormVisible">
+    <app-product-form></app-product-form>
+</div>
+
+<div *ngIf="!isFormVisible" class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSource" matSort class="mat-table">
 
-    <!-- Display ID Column -->
     <ng-container matColumnDef="displayId">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
         <td mat-cell *matCellDef="let product"> {{product.displayId}} </td>
     </ng-container>
 
-    <!-- Name Column -->
     <ng-container matColumnDef="nombre">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Nombre </th>
         <td mat-cell *matCellDef="let product"> {{product.nombre}} </td>
     </ng-container>
 
-    <!-- Price Column -->
     <ng-container matColumnDef="precio">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Precio </th>
         <td mat-cell *matCellDef="let product"> {{product.precio}} </td>
     </ng-container>
 
-    <!-- Quantity Column -->
     <ng-container matColumnDef="cantidad">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Cantidad </th>
         <td mat-cell *matCellDef="let product"> {{product.cantidad}} </td>
     </ng-container>
 
-    <!-- Category Column -->
     <ng-container matColumnDef="categoria">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Categoria </th>
         <td mat-cell *matCellDef="let product"> {{product.categoria}} </td>
     </ng-container>
 
-    <!-- Actions Column -->
     <ng-container matColumnDef="actions">
         <th mat-header-cell *matHeaderCellDef> Acciones </th>
         <td mat-cell *matCellDef="let product">
@@ -40,9 +48,8 @@
         </td>
     </ng-container>
 
-    <!-- Header and Row Definitions -->
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 
     </table>
 </div>
