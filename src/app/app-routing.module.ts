@@ -6,7 +6,9 @@ import { ProductListComponent } from './features/product/product-list/product-li
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
+  { path: 'roles', component: ProductListComponent },
   { path: 'users', component: ProductListComponent },
+  { path: 'categories', component: ProductListComponent },
   { path: 'products', component: ProductListComponent },
   { path: 'add-product', component: ProductFormComponent },
   { path: 'sales', component: ProductListComponent },
