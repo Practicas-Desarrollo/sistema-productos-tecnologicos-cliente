@@ -41,14 +41,16 @@ export class ProductFormComponent implements OnInit {
   onSubmit(): void {
     if (this.productForm.valid) {
       this.productService.addProduct(this.productForm.value).subscribe(response => {
-        // Handle successful response
         console.log('Product added successfully', response);
-        this.productForm.reset(); // Optionally reset the form
+        this.productForm.reset();
       }, error => {
-        // Handle error response
         console.error('Error adding product', error);
       });
     }
+  }
+
+  onCancel(): void {
+    this.productForm.reset();
   }
 
 }
